@@ -99,9 +99,9 @@ class PriceSize(BetfairModel):
 class StartingPrices(BetfairModel):
     near_price = Field(DataType(float))
     far_price = Field(DataType(float))
-    back_state_taken = Field(ModelType(PriceSize))
-    lay_liability_taken = Field(ModelType(PriceSize))
-    actual_SP = Field(DataType(float))
+    back_stake_taken = ListField(ModelType(PriceSize))
+    lay_liability_taken = ListField(ModelType(PriceSize))
+    actual_sp = Field(DataType(float))
 
 
 class ExchangePrices(BetfairModel):
